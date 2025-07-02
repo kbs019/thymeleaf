@@ -11,3 +11,5 @@
 <p th:text="${member.country}"></p>
 
 <a th:href="@{/th/memberForm}">가입하기</a>
+
+<p>취미 : <span th:each="hobby : ${member.hobbies}" th:text="${hobby}+'  '"></span></p>
