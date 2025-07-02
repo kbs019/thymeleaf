@@ -1,0 +1,13 @@
+<!-- 기본적으로 html 파일을 지원하지 않음 (나중에 추가할 예정) -->
+<!-- *{} 선택변수 표현식 -->
+<h3>선택 변수 표현식</h3>
+<div th:object="${session.user}"><!-- session 안에 있는 user 라는 이름의 를 찾겠다. -->		<!-- 타임리프에서 변수를 선언하는 방법 th:object -->
+	<p> Name : <span th:text="*{name}"></span></p>
+	<p> Age : <span th:text="*{age}"></span></p>
+</div>
+
+<h3>변수 표현식</h3>	<!-- th:object 를 사용하지 않았기에 session 안에 있는 user 안에 있는 name 으로 꺼내 사용 -->
+<div>
+	<p>Name : <span th:text="${session.user.name}"></span></p>
+	<p>Age : <span th:text="${session.user.age}"></span></p>
+</div>

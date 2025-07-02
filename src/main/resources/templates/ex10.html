@@ -1,0 +1,15 @@
+<!-- 타임리프에서의 조건문 if -->
+<!-- 
+	타임리프에서 if 문은 if, unless 두 가지가 존재한다.
+		if - unless 가 if - else 와 같은 역할을 한다.
+		
+		if 문은 조건이 true 일때 처리 // unless 문은 조건이 false 일때 처리
+		unless 는 if 문 없이 따로 사용이 가능하다.
+ -->
+<h3>조건문 if-unless 함께 사용 -> 자바에서 사용하던 if 문과 똑같이 사용</h3>
+<span th:if="${age} > 100">크다</span>
+<span th:unless="${age} >100">작다</span>
+<!-- 두 조건문의 조건식이 같지만, unless 문은 조건식이 false 일때, 조건문 내부 코드가 실행된다. -->
+
+<h3>unless 단독 사용</h3>
+<span th:unless="${age} > 100">false 출력</span>

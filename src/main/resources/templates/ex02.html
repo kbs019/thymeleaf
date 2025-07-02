@@ -1,0 +1,5 @@
+<div th:text="${message}">html 태그가 적용이 되지 않고, 문자열로서 출력된다.</div>
+<!-- th:text : html 태그 적용 X -->
+
+<div th:utext="${htmlContent}">html 태그가 적용되어 브라우저에 출력된다.</div>
+<!-- th:utext : html 태그 적용 O -->

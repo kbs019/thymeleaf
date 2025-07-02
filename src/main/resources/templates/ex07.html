@@ -1,0 +1,25 @@
+<!-- 
+	프래그먼트 표현식 ~{}	~ 기호 사용
+		다른 html 을 포함시킬 때 사용한다.
+		jsp 의 include 와 같은 기능을 한다. (헤더와 푸터에 사용할 수 있음)
+		
+	main.html / ex07.html / sub.html 을 준비해둔다. 
+-->
+
+<div th:insert="~{main.html}"></div>	<!-- th:insert	: 삽입 -->
+<div th:replace="~{main.html}"></div>	<!-- th:replace	: 대체 -->
+<!-- 
+	insert 와 replace 의 차이
+		insert 는 th:insert 가 가지는 div 태그 안에 main.html 이 들어가고
+			- 자신의 div 태그안에 insert(삽입)한다.
+		replace 는 th:replace 가 존재하는 div 태그를 main.html 으로 대체한다.
+			- 자신의 div 태그를 replace(대체)한다.
+-->
+<div th:insert="~{sub.html :: title}"></div>
+<div th:insert="~{sub.html :: content}"></div>
+<div th:insert="~{sub.html :: info('java', '010-1234-5678')}"></div>
+<div th:insert="~{sub.html :: info('test', '010-3333-4444')}"></div>
+<!-- 
+	프래그먼트 표현식에서 하용하는 ::
+		sub.html 안에 존재하는 title 이라는 이름의 프래그먼트를 사용하겠다.
+ -->

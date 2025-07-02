@@ -1,0 +1,30 @@
+<div th:text="#{content.id}"></div>
+<div th:text="#{content.name}"></div>
+<div th:text="#{version}"></div>
+<div th:text="#{date}"></div>
+
+
+
+<!--
+	타임리프의 표현식
+	#{}		: 메세지 표현식
+			: messages.properties 파일에 정의된 속성을 사용 (다국어 처리)
+			
+	${}		: 변수 표현식
+			: 모델 객체로 부터 받아온 속성에 접근하는데 사용
+			ex) ${name} / ${age}
+			
+	${#}	: 기본 객체 표현식
+			: 타임리프의 내장된 기본 객체를 사용할 때 (타임리프의 내장객체는 보통  s 가 붙어있음 (lists) >> ${#lists.size()} : lists 내장객체가 가지고있는 size() 메서드)
+	
+	@{}		: 링크 표현식
+			: URL을 생성하는데 사용
+			ex) <a th:href="@{/home/images/list}"></a>
+			
+	*{}		: 선택변수 표현식
+			: 현재 객체의 내부 보호막이며 변수(속성)에 접근하는데 사용
+			: 주로 반복문에 사용된다.
+			
+	~{}		: 프래그먼트 표현식
+			: 다른 html을 포함시킬 때 사용	(jsp 의 include 와 같은 기능)
+-->

@@ -1,0 +1,8 @@
+<!-- th:src 속성 -->
+<!-- static 폴더의 경로는 쓰지 않는다. -->
+<img th:src="@{/img/java.png}" />
+
+<br>
+
+<img th:src="@{|/img/${image}|}" />		<br>
+<img th:src="@{/img/{kkk}(kkk=${image})}" />

@@ -1,0 +1,7 @@
+<!-- html 를 먼저 읽은 뒤에 타임리프를 적용한다. -->
+<!-- HTML 은 표현언어를 처리하지 못한다. -->
+<!-- ${} @{} *{} ~{} 와 같은 표현식은 반드시 타임리프 속성을 사용해야 한다. -->
+<h3>th:value 속성</h3>
+<h3>inpug 태그의 value 속성에 변수 표현식을 사용할 때, th:value 속성을 사용해야 한다.</h3>
+<input type="text" value="${age}" />
+<input type="text" th:value="${age}" />

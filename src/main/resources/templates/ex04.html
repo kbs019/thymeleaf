@@ -1,0 +1,11 @@
+<!-- 기본 객체 표현식 ${#} -->
+<div th:text="${#locale}"></div>	<!-- 적용된 언어를 확인 -->
+<div th:text="${#messages.msg('version')}"></div>	
+<div th:text="${#dates.format(date)}"></div>
+<div th:text="${#dates.format(date, 'dd/MMM/yyyy HH:mm')}"></div> <!-- MMM 은 영문 월의 약자(Jan / Feb / Mar 등등)로 사용되어 *월 이라고 출력되는 것이다. -->
+<div th:text="${#calendars.day(date)}"></div>	<!-- 한달 중에 오늘이 몇일인지 확인 -->
+<div th:text="${#numbers.formatInteger(num,3)}"></div>		<!-- 12 => 012 로 표현한다. 최소 3자리 로 표현한다. -->
+<div th:text="${#numbers.formatPercent(num2,3,2)}"></div>	<!-- (변수명, 정수 최소 3자리, 소숫점 2자리) - 반올림하여 소수점 2째 자리까지 표현한다. -->
+<div th:text="${#strings.substring(message,0,5)}"></div>	<!-- message 변수의 문자열의 0번 인덱스 포함 ~ 5번 인덱스 미만 까지 표현 -->
+<div th:text="${#lists.size(list)}"></div>
+<div th:text="${#lists.sort(list)}"></div>	<!-- 첫글자의 알파벳 순서로 오름차순 정렬하여 출력 -->
